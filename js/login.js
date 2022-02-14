@@ -24,7 +24,6 @@ const app = createApp({
                 console.log(token,expired)
                 document.cookie =`hexToken=${token}; expires=${new Date(expired)};`;
                 window.location='https://ginatung.github.io/2022Vue-W3/week3';
-                window.location='https://ginatung.github.io/2022Vue-W3/week2';
             })
             .catch((error)=>{
                 console.log(error)

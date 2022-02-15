@@ -3,6 +3,7 @@ import { createApp } from 'https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.29/vue
 //燈入及登入狀態、取得產品列表
 const site='https://vue3-course-api.hexschool.io/v2';
 const api_path='yuling202202';
+let productModal ={};
 
 const app = createApp({
     data(){
@@ -41,6 +42,10 @@ const app = createApp({
     },
     mounted(){
         this.checkLogin();
+        productModal = new bootstrap.Modal(document.getElementById('myModal'), {
+            keyboard: false
+          })
+          productModal.show();
     }
 })
 app.mount('#app');

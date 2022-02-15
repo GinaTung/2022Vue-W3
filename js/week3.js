@@ -46,6 +46,9 @@ const app = createApp({
             keyboard: false
           })
           productModal.show();
+          setTimeout(()=>{
+              productModal.hide();
+          },30000)
     }
 })
 app.mount('#app');

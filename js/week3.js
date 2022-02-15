@@ -38,17 +38,19 @@ const app = createApp({
             })
 
         },
-    
+        openModal(){
+            productModal.show();
+        }
     },
     mounted(){
         this.checkLogin();
-        productModal = new bootstrap.Modal(document.getElementById('exampleModal'), {
+        productModal = new bootstrap.Modal(document.getElementById('productModal'), {
             keyboard: false
           })
-          productModal.show();
-          setTimeout(()=>{
-              productModal.hide();
-          },30000)
+        //   productModal.show();
+        //   setTimeout(()=>{
+        //       productModal.hide();
+        //   },30000)
     }
 })
 app.mount('#app');

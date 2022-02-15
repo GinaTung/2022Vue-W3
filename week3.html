@@ -15,7 +15,7 @@
     <div id="app">
       <div class="container">
         <div class="text-end mt-4">
-          <button class="btn btn-primary" type="button">
+          <button class="btn btn-primary" type="button" @click="openModal">
             建立新的產品
           </button>
           <button type="button" class="btn w-10 btn-info " v-on:click="tempProduct=item">
@@ -164,7 +164,7 @@
           </div>
         </div>
       </div>
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -180,7 +180,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <div id="delProductModal" ref="delProductModal" class="modal fade" tabindex="-1"
            aria-labelledby="delProductModalLabel" aria-hidden="true">
         <div class="modal-dialog">

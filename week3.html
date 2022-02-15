@@ -44,14 +44,14 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td></td>
-              <td></td>
-              <td class="text-end"></td>
-              <td class="text-end"></td>
+            <tr v-for="item in products" :key="item.id">
+              <td>{{item.category}}</td>
+              <td>{{item.title}}</td>
+              <td class="text-end">{{item.origin_price}}</td>
+              <td class="text-end">{{item.price}}</td>
               <td>
-                <span class="text-success">啟用</span>
-                <span>未啟用</span>
+                <span class="text-success" v-if="item.is_enabled">啟用</span>
+                <span v-else>未啟用</span>
               </td>
               <td>
                 <div class="btn-group">
@@ -94,7 +94,7 @@
                       新增圖片
                     </button>
                   </div>
-                  <div v-else>
+                  <div>
                     <button class="btn btn-outline-danger btn-sm d-block w-100">
                       刪除圖片
                     </button>
@@ -201,7 +201,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
             integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
             crossorigin="anonymous"></script>
-
+    <script src="https://unpkg.com/vue@next"></script>
+    <script type="module" src="js/week3.js"></script>
   </body>
 
 </html>

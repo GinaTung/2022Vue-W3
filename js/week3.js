@@ -35,7 +35,9 @@ const app = createApp({
                     console.log(item)
                 })
             })
-        }
+
+        },
+    
     },
     mounted(){
         this.checkLogin();

@@ -42,7 +42,7 @@ const app = createApp({
     },
     mounted(){
         this.checkLogin();
-        productModal = new bootstrap.Modal(document.getElementById('myModal'), {
+        productModal = new bootstrap.Modal(document.getElementById('exampleModal'), {
             keyboard: false
           })
           productModal.show();

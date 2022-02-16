@@ -89,7 +89,7 @@
                   <div class="mb-3">
                     <h3>多圖設置</h3>
                     <div v-if="Array.isArray(tempPoroduct.imagesUrl)">(是不是Ray)
-                      <template v-for="(item,key) in tempPoroduct.imagesUrl" :key="key + '21345'">
+                      <template v-for="(img,key) in tempPoroduct.imagesUrl" :key="key + '21345'">
                         <input type="text" id="imagesUrl" v-model="tempProduct.imagesUrl" class="form-control">
                         <img :src="tempProduct.imagesUrl" class="img-fluid" alt="">
                       </template>  

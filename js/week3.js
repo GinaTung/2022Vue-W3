@@ -10,7 +10,7 @@ const app = createApp({
         return{
             products:[],
             tempProduct:{
-                imgesUrl:[],
+                imagesUrl:[],
             }
 
         }

@@ -48,6 +48,9 @@ const app = createApp({
             axios.post(url ,{ data: this.tempProduct })
             .then((res)=>{
                 console.log(res)
+
+                this.getProducts();
+                productModal.hide();
             });
         }
     },

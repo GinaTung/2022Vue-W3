@@ -33,7 +33,7 @@ const app = createApp({
             axios.get(url)
             .then((res)=>{
                 this.products =res.data.products;
-               // console.log(Object.values(this.products))//物件轉陣列
+               console.log(Object.values(this.products))//物件轉陣列
                 Object.values(this.products).forEach((item)=>{
                     console.log(item)
                 })

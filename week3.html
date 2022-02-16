@@ -88,13 +88,13 @@
                   </div>
                   <div class="mb-3">
                     <h3>多圖設置</h3>
-                    <div v-if="Arry.isArry(tempPoroduct.imageUrl">(是不是Ray)
-                      <template v-for="(item,key) in temPoroduct.imagesUrl" :key="key + '21345'">
+                    <div v-if="Array.isArray(tempPoroduct.imagesUrl)">(是不是Ray)
+                      <template v-for="(item,key) in tempPoroduct.imagesUrl" :key="key + '21345'">
                         <input type="text" id="imagesUrl" v-model="tempProduct.imagesUrl" class="form-control">
                         <img :src="tempProduct.imagesUrl" class="img-fluid" alt="">
                       </template>  
-                    <button class="btn btn-outline-primary btn-sm  w-100" @clicl="tempPoroduct.imagesUrl.push('')">新增圖片</button>
-                    <button class="btn btn-outline-danger btn-sm  w-100" @click="temPoroduct.imagesUrl.pop()"> 刪除圖片</button>
+                      <button class="btn btn-outline-primary btn-sm  w-100" @click="tempPoroduct.imagesUrl.push('')">新增圖片</button>
+                      <button class="btn btn-outline-danger btn-sm  w-100" @click="tempPoroduct.imagesUrl.pop()"> 刪除圖片</button>
                     </div>
                   </div> 
                  

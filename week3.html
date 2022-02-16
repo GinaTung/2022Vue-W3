@@ -15,7 +15,7 @@
     <div id="app">
       <div class="container">
         <div class="text-end mt-4">
-          <button class="btn btn-primary" type="button" @click="openModal">
+          <button class="btn btn-primary" type="button" @click="openModal('isNew')">
             建立新的產品
           </button>
           <button type="button" class="btn w-10 btn-info " v-on:click="tempProduct=item">
@@ -55,7 +55,7 @@
               </td>
               <td>
                 <div class="btn-group">
-                  <button type="button" class="btn btn-outline-primary btn-sm">
+                  <button type="button" class="btn btn-outline-primary btn-sm" @click="openModal('edit')">
                     編輯
                   </button>
                   <button type="button" class="btn btn-outline-danger btn-sm">

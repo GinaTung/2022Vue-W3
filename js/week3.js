@@ -9,7 +9,9 @@ const app = createApp({
     data(){
         return{
             products:[],
-            tempProduct:{}
+            tempProduct:{
+                imgesUrl:[],
+            }
 
         }
     },

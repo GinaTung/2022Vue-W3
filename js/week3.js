@@ -48,13 +48,13 @@ const app = createApp({
                 }
                 productModal.show();
             }else if( status ==='edit'){
-                this.tempProduct =product;
+                this.tempProduct ={...product};
                 productModal.show();
             }
             
            
         },
-        addProduct(){
+        updateProduct(){
             const url =`${site}/api/${api_path}/admin/product`;
             axios.post(url ,{ data: this.tempProduct })
             .then((res)=>{

@@ -52,8 +52,12 @@ const app = createApp({
             }else if( status ==='edit'){
                 this.tempProduct ={...product};
                 productModal.show();
-            }
                 this.isNew =false;
+            }else if( status === 'delete'){
+                delProductModal.show();
+                this.tempProduct ={...product};
+            }
+                
            
         },
         updateProduct(){
@@ -73,7 +77,15 @@ const app = createApp({
             });
         },
         delProduct(){
+            let url =`${site}/api/${api_path}/admin/product/${this.tempProduct.id}`;
 
+            axios.delete(url)
+            .then((res)=>{
+                console.log(res)
+
+                this.getProducts();
+                delProductModal.hide();
+            });
         }
     },
     mounted(){
@@ -82,7 +94,7 @@ const app = createApp({
             keyboard: false
           })
         delProductModal =new bootstrap.Modal(document.getElementById('delProductModal'));
-        delProductModal.show();
+        //delProductModal.show();
         //   productModal.show();
         //   setTimeout(()=>{
         //       productModal.hide();

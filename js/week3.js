@@ -11,8 +11,8 @@ const app = createApp({
             products:[],
             tempProduct:{
                 imagesUrl:[],
-            }
-
+            },
+            isNew:false,
         }
     },
     methods:{
@@ -47,16 +47,23 @@ const app = createApp({
                     imagesUrl:[],
                 }
                 productModal.show();
+                this.isNew =true;
             }else if( status ==='edit'){
                 this.tempProduct ={...product};
                 productModal.show();
             }
-            
+                this.isNew =false;
            
         },
         updateProduct(){
-            const url =`${site}/api/${api_path}/admin/product`;
-            axios.post(url ,{ data: this.tempProduct })
+            let url =`${site}/api/${api_path}/admin/product`;
+            let method='post';
+
+            if(! this.isNew){
+                 url =`${site}/api/${api_path}/admin/product/${this.tempProduct.id}`;
+                 method='put';
+            }
+            axios[method](url ,{ data: this.tempProduct })
             .then((res)=>{
                 console.log(res)
 

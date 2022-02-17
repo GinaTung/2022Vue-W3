@@ -35,12 +35,13 @@ const app = createApp({
                 this.products =res.data.products;
                console.log(Object.values(this.products))//物件轉陣列
                 Object.values(this.products).forEach((item)=>{
-                    console.log(item)
+                    //console.log(item)
                 })
             })
 
         },
-        openModal(){
+        openModal(status,product){
+            console.log(status,product);
             productModal.show();
         },
         addProduct(){

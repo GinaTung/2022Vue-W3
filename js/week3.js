@@ -4,6 +4,7 @@ import { createApp } from 'https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.29/vue
 const site='https://vue3-course-api.hexschool.io/v2';
 const api_path='yuling202202';
 let productModal ={};
+let delProductModal ={};
 
 const app = createApp({
     data(){
@@ -70,6 +71,9 @@ const app = createApp({
                 this.getProducts();
                 productModal.hide();
             });
+        },
+        delProduct(){
+
         }
     },
     mounted(){
@@ -77,6 +81,8 @@ const app = createApp({
         productModal = new bootstrap.Modal(document.getElementById('productModal'), {
             keyboard: false
           })
+        delProductModal =new bootstrap.Modal(document.getElementById('delProductModal'));
+        delProductModal.show();
         //   productModal.show();
         //   setTimeout(()=>{
         //       productModal.hide();

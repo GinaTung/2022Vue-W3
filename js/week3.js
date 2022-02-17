@@ -42,7 +42,17 @@ const app = createApp({
         },
         openModal(status,product){
             console.log(status,product);
-            productModal.show();
+            if(status === 'isNew'){
+                this.tempProduct={
+                    imagesUrl:[],
+                }
+                productModal.show();
+            }else if( status ==='edit'){
+                this.tempProduct =product;
+                productModal.show();
+            }
+            
+           
         },
         addProduct(){
             const url =`${site}/api/${api_path}/admin/product`;

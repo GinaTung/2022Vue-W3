@@ -30,9 +30,9 @@ const app = createApp({
                 window.location='https://ginatung.github.io/2022Vue-W3/week3';
             })
             .catch((error)=>{
-                console.log(error)
+                console.log(error.data.message)
                 if(error.data.message="登入失敗"){
-                    alert('登入失敗');
+                    alert('請填寫正確的帳號及密碼');
                 }
             })
         }

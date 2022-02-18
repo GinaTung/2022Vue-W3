@@ -4,6 +4,10 @@ import { createApp } from 'https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.29/vue
 const site='https://vue3-course-api.hexschool.io/v2';
 const path='yuling202202';
 
+
+
+
+
 const app = createApp({
     data(){
         return{

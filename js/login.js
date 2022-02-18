@@ -31,6 +31,9 @@ const app = createApp({
             })
             .catch((error)=>{
                 console.log(error)
+                if(error.data.message="登入失敗"){
+                    alert('登入失敗');
+                }
             })
         }
     }

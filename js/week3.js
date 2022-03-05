@@ -50,12 +50,12 @@ const app = createApp({
                 productModal.show();
                 this.isNew =true;
             }else if( status ==='edit'){
-                this.tempProduct ={...product};
+                this.tempProduct ={imagesUrl: [],...product};
                 productModal.show();
                 this.isNew =false;
             }else if( status === 'delete'){
                 delProductModal.show();
-                this.tempProduct ={...product};
+                this.tempProduct ={imagesUrl: [],...product};
             }
                 
            
